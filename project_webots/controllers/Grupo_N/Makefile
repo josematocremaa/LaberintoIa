@@ -1,9 +1,7 @@
-###
-### Makefile for Grupo_N Webots controller (snap install on Linux)
-###
-
-# Webots snap installation path
-WEBOTS_HOME ?= /snap/webots/current/usr/share/webots
+### Makefile for Grupo_N Webots controller
+### Works on Windows, macOS and Linux.
+### On Linux with snap Webots, run:
+###   WEBOTS_HOME=/snap/webots/current/usr/share/webots make
 
 null :=
 space := $(null) $(null)

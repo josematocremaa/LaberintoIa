@@ -140,7 +140,7 @@ static void initialize() {
   compass = wb_robot_get_device("compass"); wb_compass_enable(compass, TIME_STEP);
 
   if (LOG_DATA) {
-    log_fp = fopen("/home/josemanuel/Practica2_ia/training_data.csv", "a");
+    log_fp = fopen("training_data.csv", "a");  /* saved next to the controller */
     /* Write header only if file is empty */
     if (log_fp) {
       fseek(log_fp, 0, SEEK_END);
@@ -150,7 +150,8 @@ static void initialize() {
   }
 
   printf("The %s robot is initialized!\n", robot_name);
-  printf("Press 'a' for autopilot, arrows for manual, 'a' again to stop\n");
+  printf("DATA COLLECTION MODE: drive with arrow keys. CSV saved automatically.\n");
+  printf("(Press 'a' for autonomous autopilot only after data is collected)\n");
 }
 
 /* ═══════════════════════════════════════════════════════════════════════
